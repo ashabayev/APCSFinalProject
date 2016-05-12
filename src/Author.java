@@ -1,20 +1,25 @@
 
 public class Author {
-	private String name;
+	private String firstName;
+	private String lastName;
 	private String publisher;
-	
-	public Author(String newName, String newPublisher)
-	{
-		name = newName;
+
+	public Author(String firstN, String lastN, String newPublisher) {
+		firstName = firstN;
+		lastName = lastN;
 		publisher = newPublisher;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String desiredName) {
-		name = desiredName;
+	public String getLastName() {
+		return lastName;
+	}
+
+	public String getFullName() {
+		return firstName + " " + lastName;
 	}
 
 	public String getPublisher() {

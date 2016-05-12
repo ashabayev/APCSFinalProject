@@ -1,6 +1,9 @@
-import java.util.ArrayList;
-
 public class Library {
-	private ArrayList<Patron> patronList;
-	private ArrayList<Book> bookList;
+	private BookList books;
+	private PatronList patrons;
+
+	public Library() {
+
+	}
+
 }
