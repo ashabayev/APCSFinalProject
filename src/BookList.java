@@ -18,10 +18,6 @@ public class BookList {
 		});
 	}
 
-	public LibraryBook removeBook(int i) {
-		return bookList.remove(i);
-	}
-
 	public LinkedList<LibraryBook> searchTitles(String search) {
 		LinkedList<LibraryBook> found = new LinkedList<LibraryBook>();
 		for (int i = 0; i < bookList.size(); i++) {
