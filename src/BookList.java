@@ -86,4 +86,23 @@ public class BookList {
 		}
 		return found;
 	}
+	
+	/**Prints the list of customers and alongside their balances.
+	 * 
+	 */
+	public void printBooks()
+	{
+		if(bookList.size() == 0)
+		{
+			System.out.println("List is empty.");
+		}
+		else
+		{
+			System.out.println("Contents of list: ");
+			for(int i = 0; i < bookList.size(); i++)
+			{
+				System.out.println(bookList.get(i));
+			}
+		}
+	}
 }

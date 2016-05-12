@@ -65,5 +65,14 @@ public class LibraryBook implements Book {
 	{
 		return dueDate.getMonth() + "/" dueDate.getDay() + "/" dueDate.getYear();
 	}
+	
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString()
+	{
+		return "{" + title + ", " + author + ", " + publishedYear + "," + isbn + ", " + location + ", " + dueDate + "}";
+	}
 
 }
