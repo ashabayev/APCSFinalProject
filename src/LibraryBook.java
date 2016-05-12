@@ -1,3 +1,4 @@
+import java.util.Date;
 
 public class LibraryBook implements Book {
 	private String location;
@@ -5,6 +6,7 @@ public class LibraryBook implements Book {
 	private String publishedYear;
 	private String title;
 	private Author author;
+	private Date dueDate;
 
 	public LibraryBook(String place, String isbnNum, String pubYear, String bookTitle, Author newAuthor) {
 		location = place;
@@ -57,6 +59,11 @@ public class LibraryBook implements Book {
 
 	public void setAuthor(Author desiredAuthor) {
 		author = desiredAuthor;
+	}
+
+	public String getDueDate()
+	{
+		return dueDate.getMonth() + "/" dueDate.getDay() + "/" dueDate.getYear();
 	}
 
 }

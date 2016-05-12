@@ -7,4 +7,12 @@ public class PatronList {
 		patronList = new LinkedList<Patron>();
 	}
 
+	public void addPatron(Patron p) {
+		patronList.add(p);
+	}
+
+	public Patron removePatron(int i) {
+		return patronList.remove(i);
+	}
+
 }
