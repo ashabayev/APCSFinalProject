@@ -2,18 +2,21 @@
 public interface Book {
 	String getShelfLocaton();
 
-	/**six shelfing locations: shelf, express shelf, drive up pickup, checked out, lost
+	/**
+	 * six shelfing locations: shelf, express shelf, drive up pickup, checked
+	 * out, lost
+	 * 
 	 * @param location
 	 */
 	void setShelfLocation(String location);
 
-	int getIBSN();
+	String getIBSN();
 
-	void setISBN(int isbn);
+	void setISBN(String isbn);
 
-	int getYearPublished();
+	String getYearPublished();
 
-	void setYearPublished(int year);
+	void setYearPublished(String year);
 
 	String getTitle();
 

@@ -1,21 +1,22 @@
 
 public class LibraryBook implements Book {
 	private String location;
-	private int isbn;
-	private int publishedYear;
+	private String isbn;
+	private String publishedYear;
 	private String title;
 	private Author author;
 
-	public LibraryBook(String place, int isbnNum, int pubYear, String bookTitle, Author newAuthor)
-	{
+	public LibraryBook(String place, String isbnNum, String pubYear, String bookTitle, Author newAuthor) {
 		location = place;
 		isbn = isbnNum;
 		publishedYear = pubYear;
 		title = bookTitle;
 		author = newAuthor;
 	}
-	
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see Book#getShelfLocaton()
 	 */
 	public String getShelfLocaton() {
@@ -26,19 +27,19 @@ public class LibraryBook implements Book {
 		location = desiredLocation;
 	}
 
-	public int getIBSN() {
+	public String getIBSN() {
 		return isbn;
 	}
 
-	public void setISBN(int desiredISBN) {
+	public void setISBN(String desiredISBN) {
 		isbn = desiredISBN;
 	}
 
-	public int getYearPublished() {
+	public String getYearPublished() {
 		return publishedYear;
 	}
 
-	public void setYearPublished(int year) {
+	public void setYearPublished(String year) {
 		publishedYear = year;
 	}
 
