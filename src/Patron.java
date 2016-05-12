@@ -4,7 +4,7 @@ public class Patron {
 	private String lastName;
 	private String firstName;
 	private Address address;
-	private ArrayList<Book> checkedOut; // TODO: checked out
+	private ArrayList<LibraryBook> checkedOut; // TODO: checked out
 	private long fee;
 
 	/**
@@ -17,10 +17,12 @@ public class Patron {
 	 * @param residence
 	 *            the patron's address
 	 */
-	public Patron(String last, String first, Address residence) {
+	public Patron(String last, String first, Address residence, int overdueFee, ArrayList<LibraryBook> newCheckedOut) {
 		lastName = last;
 		firstName = first;
 		address = residence;
+		setFee(overdueFee);
+		setCheckedOut(newCheckedOut);
 	}
 
 	/**
@@ -32,5 +34,21 @@ public class Patron {
 	 */
 	public String toString() {
 		return (firstName + " " + lastName + ", " + address.toString());
+	}
+
+	public ArrayList<LibraryBook> getCheckedOut() {
+		return checkedOut;
+	}
+
+	public void setCheckedOut(ArrayList<LibraryBook> checkedOut) {
+		this.checkedOut = checkedOut;
+	}
+
+	public long getFee() {
+		return fee;
+	}
+
+	public void setFee(long fee) {
+		this.fee = fee;
 	}
 }
