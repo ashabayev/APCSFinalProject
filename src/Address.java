@@ -28,6 +28,9 @@ public class Address {
 		zip = zipCode;
 	}
 
+	/**constructor
+	 * @param a
+	 */
 	public Address(Address a) {
 		this.street = a.street;
 		this.city = a.city;
@@ -44,6 +47,10 @@ public class Address {
 		return (street + ", " + city + ", " + state + " " + zip);
 	}
 
+	/**check if addresses are equal 
+	 * @param a
+	 * @return
+	 */
 	public boolean equal(Address a) {
 		if (this.street.equals(a.street) && this.city.equals(a.city) && this.state.equals(a.state)
 				&& this.zip.equals(a.zip)) {
