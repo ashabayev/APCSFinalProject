@@ -1,6 +1,10 @@
 
+/**
+ * @author Anna and Aadit
+ *
+ */
 public interface Book {
-	String getShelfLocaton();
+	String getShelfLocation();
 
 	/**
 	 * six shelfing locations: shelf, express shelf, drive up pickup, checked
@@ -10,19 +14,43 @@ public interface Book {
 	 */
 	void setShelfLocation(String location);
 
-	String getIBSN();
+	/**
+	 * @return ISBN
+	 */
+	String getISBN();
 
+	/**
+	 * @param isbn
+	 */
 	void setISBN(String isbn);
 
+	/**
+	 * @return yearPublished
+	 */
 	String getYearPublished();
 
+	/**
+	 * @param year
+	 */
 	void setYearPublished(String year);
 
+	/**
+	 * @return title
+	 */
 	String getTitle();
 
+	/**
+	 * @param title
+	 */
 	void setTitle(String title);
 
+	/**
+	 * @return author
+	 */
 	Author getAuthor();
 
+	/**
+	 * @param author
+	 */
 	void setAuthor(Author author);
 }
