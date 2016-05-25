@@ -9,7 +9,9 @@ import java.util.Date;
 public class TestLibrary {
 
 	/**
-	 * @param args
+	 * The driver class that demonstrates the classes created for this entire
+	 * project and their functionality, including Library, Book, Patron,
+	 * LibraryBook, BookList, PatronList, and Author
 	 */
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
@@ -47,16 +49,16 @@ public class TestLibrary {
 		wholeList.printBooks(library.getPatrons().getPatron(0).getCheckedOut());
 		wholeList.removeBook(5);
 		library.getPatrons().addPatron(new Patron("Omar", "Aldawud",
-				new Address("4587 Alpha Lane", "Chicago", "IL", "60584"), 58.54, wholeList.getBooks()));
+				new Address("4587 Alpha Lane", "Chicago", "IL", "60584"), 98.25, wholeList.getBooks()));
 		wholeList.removeBook(2);
 		library.getPatrons().addPatron(new Patron("Aadit", "Shah",
 				new Address("337 November Lane", "Chicago", "IL", "54871"), 58.54, wholeList.getBooks()));
 		wholeList.removeBook(0);
 		library.getPatrons().addPatron(new Patron("Anna", "Shabayev",
-				new Address("3145 Lorridge Lane", "Chicago", "IL", "32568"), 58.54, wholeList.getBooks()));
+				new Address("3145 Lorridge Lane", "Chicago", "IL", "32568"), 5.68, wholeList.getBooks()));
 		wholeList.removeBook(1);
 		library.getPatrons().addPatron(new Patron("Kevin", "James",
-				new Address("9265 Beta Lane", "Chicago", "IL", "58478"), 58.54, wholeList.getBooks()));
+				new Address("9265 Beta Lane", "Chicago", "IL", "58478"), 8.24, wholeList.getBooks()));
 		System.out.println("Additionally, the following patrons have already been preloaded to this library to test:");
 		System.out.println(library.getPatrons().getPatron(1).toString());
 		System.out.println(library.getPatrons().getPatron(2).toString());

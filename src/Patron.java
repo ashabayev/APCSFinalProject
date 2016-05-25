@@ -9,7 +9,7 @@ public class Patron {
 	private String firstName;
 	private Address address;
 	private LinkedList<LibraryBook> checkedOut; // TODO: checked out
-	private double fee;
+	private double fee = 0.00;
 
 	/**
 	 * Constructor creates a patron from a last name, first name, and address
@@ -20,6 +20,9 @@ public class Patron {
 	 *            the patron's first name
 	 * @param residence
 	 *            the patron's address
+	 * 
+	 * @param overdueFee
+	 *            the fee the patrons owes to the library
 	 * @param newChecked
 	 *            out the books checked out by the patron at first
 	 */
@@ -28,7 +31,7 @@ public class Patron {
 		setFirstName(firstN);
 		setLastName(lastN);
 		setAddress(residence);
-		setFee(overdueFee);
+		setFines(overdueFee);
 		setCheckedOut(newCheckedOut);
 	}
 
@@ -46,7 +49,7 @@ public class Patron {
 		setFirstName(firstN);
 		setLastName(lastN);
 		setAddress(residence);
-		setFee(overdueFee);
+		setFines(overdueFee);
 	}
 
 	/**
@@ -93,24 +96,31 @@ public class Patron {
 
 	/**
 	 * @param residence
+	 *            the Address object that corresponds to the patron's address
 	 */
 	public void setAddress(Address residence) {
 		address = residence;
 	}
 
 	/**
-	 * toString method returns information about the patron @return information
-	 * about the patron
+	 * The overloaded setAddress() method that takes strings for street address,
+	 * city, state, and zipcode
 	 * 
-	 * @param none
-	 * @return String info on patron
+	 * @param road
+	 *            the road where the patron lives
+	 * @param city
+	 *            the city in which the patron lives
+	 * @param state
+	 *            the state in which the patron lives
+	 * @param zipcode
+	 *            the zip code corresponding to the patron's home address
 	 */
-	public String toString() {
-		return (firstName + " " + lastName + ", " + address.toString());
+	public void setAddress(String road, String city, String state, String zipcode) {
+		setAddress(new Address(road, city, state, zipcode));
 	}
 
 	/**
-	 * @return checkedOut
+	 * @return checkedOut the list of books the patron currently checked out
 	 */
 	public LinkedList<LibraryBook> getCheckedOut() {
 		return checkedOut;
@@ -118,6 +128,7 @@ public class Patron {
 
 	/**
 	 * @param checkedOut
+	 *            the list of the checkout books for the patron
 	 */
 	public void setCheckedOut(LinkedList<LibraryBook> checkedOut) {
 		this.checkedOut = checkedOut;
@@ -125,22 +136,33 @@ public class Patron {
 
 	/**
 	 * @param l
+	 *            the library book that the patron wants to checkout
 	 */
 	public void addCheckedOut(LibraryBook l) {
 		checkedOut.add(l);
 	}
 
 	/**
-	 * @return
+	 * @return the current fee owed by the patron
 	 */
-	public double getFee() {
+	public double getFines() {
 		return fee;
 	}
 
 	/**
 	 * @param fee
 	 */
-	public void setFee(double fee) {
+	public void setFines(double fee) {
 		this.fee = fee;
 	}
+
+	/**
+	 * toString method returns information about the patron
+	 * 
+	 * @return String info on patron
+	 */
+	public String toString() {
+		return (firstName + " " + lastName + ", Address: " + address.toString() + ", Fee: " + getFines());
+	}
+
 }

@@ -1,3 +1,20 @@
-/UML Class Diagram.png
+/Address.class
+/Author.class
+/Book.class
+/BookList$1.class
 /BookList$2.class
-/UML Class Diagram.ucls
+/BookList.class
+/FirstGUI.class
+/FirstWindow$1.class
+/FirstWindow$2.class
+/FirstWindow$3.class
+/FirstWindow.class
+/Library.class
+/LibraryBook.class
+/Patron.class
+/PatronList$1.class
+/PatronList.class
+/TestLibrary.class
+/SearchWindow.class
+/BookSearchWindow$1.class
+/BookSearchWindow.class
