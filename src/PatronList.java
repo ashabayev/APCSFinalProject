@@ -68,7 +68,7 @@ public class PatronList {
 		}
 	}
 
-	public int searchPatron(Patron p) {
+	public int searchPatrons(Patron p) {
 		for (int i = 0; i < getPatrons().size(); i++) {
 			if (getPatrons().get(i).equals(p)) {
 				return i;

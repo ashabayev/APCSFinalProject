@@ -153,7 +153,7 @@ public class BookList {
 	 * @param b
 	 * @return found
 	 */
-	public int searchBook(LibraryBook b) {
+	public int searchBooks(LibraryBook b) {
 		int found = -1;
 		for (int i = 0; 0 < getBooks().size(); i++) {
 			if (b.equals(getBooks().get(i))) {
